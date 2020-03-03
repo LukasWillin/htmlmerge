@@ -88,6 +88,9 @@ Make sure `~/bin/` is in your `$PATH` variable.
       htmlmerge index.html
       htmlmerge index.html -H -C -J -o build/out.html -u
       htmlmerge index.html -H --loglevel quiet -c -i -j
+      
+    Examples (Windows):
+      py htmlmerge index.dev.html -o index.html
     
     For CSS or JavaScript compression, additional YUIcompressor jar file must be
     present in the same directory as this script.
