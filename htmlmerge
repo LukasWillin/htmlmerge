@@ -635,9 +635,10 @@ else:
 
     try:
         with open (outfile,'w') as f:
-            f.write ( all_html )
-    except:
-        error ("Failed to save \"" + outfile + "\" ! Do we have permission?")
+            f.write ( all_html.decode('utf-8') )
+    except Exception as e:
+        error ("Failed to save \"" + outfile + "\" ! Do we have permission? (Original error below)")
+        error (e)
         sys.exit(1)
     # end try
 # end if
