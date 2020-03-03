@@ -24,7 +24,8 @@ reduced. This is especially interesting for mobile devices.
 
 This script was tested on `Gentoo Linux` with `Python 3.2.5` and
 `BeautifulSoup4`.
-
+This script was tested on `Windows 10 (Version 1809, OS Build: 17763.1039)` with `python3 (3.8.2)` and
+`BeautifulSoup4 (4.8.2)`.
 
 ### Install ###
 Save `htmlmerge` to your bin path and make it executable.
