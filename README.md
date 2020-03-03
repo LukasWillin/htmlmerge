@@ -22,9 +22,10 @@ reduced. This is especially interesting for mobile devices.
 * (optional) Yahoo
   [`YUIcompressor`](https://github.com/yui/yuicompressor/releases)
 
-This script was tested on `Gentoo Linux` with `Python 3.2.5` and
+This script was tested on:
+- Unknown Date: `Gentoo Linux` with `Python 3.2.5` and
 `BeautifulSoup4`.
-This script was tested on `Windows 10 (Version 1809, OS Build: 17763.1039)` with `python3 (3.8.2)` and
+- 03.03.2020: `Windows 10 (Version 1809, OS Build: 17763.1039)` with `python3 (3.8.2)` and
 `BeautifulSoup4 (4.8.2)`.
 
 ### Install ###
