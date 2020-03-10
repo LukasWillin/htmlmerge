@@ -403,7 +403,7 @@ if merge_js:
     # iterate over script tags
     for tag in scripts:
         # get src url of script tag
-        if tag.has_key ("src"):
+        if tag.has_attr ("src"):
             # save source url to variable
             src_url = tag['src']
         else:
@@ -483,10 +483,10 @@ if merge_css:
     # iterate over link tags
     for tag in links:
         # get content of rel attribute
-        if tag.has_key ("rel"):
+        if tag.has_attr ("rel"):
             rel = " ".join (tag['rel'])
 
-            if rel == "stylesheet" and tag.has_key ("href"):
+            if rel == "stylesheet" and tag.has_attr ("href"):
                 # get href url of link tag
                 src_url = tag['href']
 
