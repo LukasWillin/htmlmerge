@@ -120,6 +120,9 @@ output file. If there is no output file given the script will save to
 * possibility to pass arguments to htmlcompressor
 * add a preset system
 
+### Development ###
+* Use unix-style end-of-line LF.
+
 ### Author ###
 Fin Christensen
 
