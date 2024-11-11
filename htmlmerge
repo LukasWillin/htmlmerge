@@ -113,7 +113,7 @@ Optional arguments:
                         Unlock comments in javascript and css
                         (e.g. /*! ... */ becomes /* ... */)
   -o FILE, --output FILE
-                        Set output file (default: merged.html)
+                        Set output file (default: -)
                         If the file extension is .gzip the html will be gziped
                         Use '-o -' to pipe output to another program
   -g, --gzip            Force a gziped output. The file extension does not
@@ -162,7 +162,7 @@ requ_args = parser.add_argument_group (
     'Required arguments'
 )
 
-requ_args.add_argument ("infile",
+requ_args.add_argument ("--infile", default="-",
                         help = "Set input html file\n" +
                                "Use '-' to read piped output from another " +
                                "program"
@@ -244,7 +244,7 @@ opt_args.add_argument ("-u", "--unlock-comments",
 opt_args.add_argument ("-o", "--output",
                        metavar = "FILE",
                        dest    = "outfile",
-                       default = "merged.html",
+                       default = "-",
                        help    = "Set output file (default: %(default)s)\n" +
                                  "If the file extension is .gzip the html " +
                                  "will be gziped\n" +
@@ -629,7 +629,7 @@ if gzip:
 
 if outfile == "-":
     info ("Piping merged data ...")
-    print (all_html)
+    print (all_html.decode('utf-8'))
 else:
     info ("Writing merged data to \"" + outfile + "\" ...")
 
