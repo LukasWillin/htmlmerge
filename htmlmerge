@@ -380,8 +380,9 @@ else:
     try:
         with open (infile,'r') as f:
             indexHTML = f.read()
-    except:
+    except Exception as e:
         error ("Could not open \"" + infile + "\" !")
+        print(e)
         sys.exit(1)
     # end try
 # end if
@@ -418,8 +419,9 @@ if merge_js:
         try:
             with open (src_url,'r') as f:
                 all_scripts += f.read()
-        except:
+        except Exception as e:
             error ("Could not open \"" + src_url + "\" !")
+            print(e)
             sys.exit(1)
         # end try
 
@@ -496,8 +498,9 @@ if merge_css:
                 try:
                     with open (src_url,'r') as f:
                         all_css += f.read()
-                except:
+                except Exception as e:
                     error ("Could not open \"" + src_url + "\" !")
+                    print(e)
                     sys.exit(1)
                 # end try
 
@@ -541,8 +544,9 @@ if merge_css:
                         with open (src_url,'r') as f:
                             # insert loaded css at old @import index
                             all_css.insert (idx, f.read())
-                    except:
+                    except Exception as e:
                         error ("Could not open \"" + src_url + "\" !")
+                        print(e)
                         sys.exit(1)
                     # end try
                 # end if
